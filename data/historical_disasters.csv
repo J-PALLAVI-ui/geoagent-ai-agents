@@ -1,0 +1,19 @@
+event_id,region,latitude,longitude,disaster_type,year,severity,rainfall_mm_24h,wind_speed_kmh,seismic_magnitude,fire_hotspots,casualties_or_impact
+HIST-001,Ernakulam Kerala,9.9816,76.2999,Flood,2018,High,285.0,42.0,0.0,0,Severe Periyar basin flooding; 400+ camps opened
+HIST-002,Ernakulam Kerala,10.0250,76.3120,Flood,2021,Medium,165.0,34.0,0.0,0,Localized inundation in low-lying Kochi wards
+HIST-003,Wayanad Kerala,11.6854,76.1320,Landslide,2024,High,310.0,38.0,0.0,0,Major hillslope debris flows in Meppadi-Mundakkai belt
+HIST-004,Wayanad Kerala,11.6080,76.0850,Landslide,2019,High,245.0,35.0,0.0,0,Puthumala slope failure after intense monsoon burst
+HIST-005,Puri Coast Odisha,19.8135,85.8312,Cyclone,2019,High,210.0,175.0,0.0,0,Cyclone Fani landfall; 1M+ residents evacuated ahead of surge
+HIST-006,Chennai Coast Tamil Nadu,13.0827,80.2707,Cyclone,2023,High,230.0,105.0,0.0,0,Cyclone Michaung heavy coastal squalls and urban flooding
+HIST-007,Chennai Coast Tamil Nadu,13.0400,80.2300,Flood,2015,High,294.0,40.0,0.0,0,Adyar basin overflow and widespread transport disruption
+HIST-008,Bandipur Forest Karnataka,11.6680,76.6285,Fire,2019,High,0.0,36.0,0.0,42,Dry-season forest fire across 15 sq km reserve boundary
+HIST-009,Guwahati Assam,26.1445,91.7362,Flood,2022,High,240.0,28.0,0.0,0,Brahmaputra level crossed danger mark; urban wards submerged
+HIST-010,Joshimath Uttarakhand,30.5506,79.5660,Landslide,2023,High,145.0,25.0,3.2,0,Land subsidence and slope instability requiring rapid relocation
+HIST-011,Chamoli Uttarakhand,30.4000,79.3300,Flood,2021,High,110.0,22.0,2.8,0,Glacial flash flood surge along Rishi Ganga valley
+HIST-012,Bhuj Gujarat,23.2420,69.6669,Earthquake,2001,High,0.0,15.0,7.7,0,Major intraplate earthquake across Kutch rift zone
+HIST-013,Bhuj Gujarat,23.3100,69.7200,Earthquake,2020,Medium,2.0,18.0,5.3,0,Moderate tremor felt across Kutch with structural inspections
+HIST-014,Mumbai Maharashtra,19.0760,72.8777,Flood,2005,High,380.0,46.0,0.0,0,Extreme monsoon deluge causing severe urban waterlogging
+HIST-015,Bengaluru Karnataka,12.9716,77.5946,Flood,2022,Medium,132.0,26.0,0.0,0,Localized lake overflow in eastern IT corridor
+HIST-016,Nilgiris Tamil Nadu,11.4102,76.6950,Landslide,2020,Medium,175.0,30.0,0.0,0,Highway slope slip triggered by saturated lateritic soil
+HIST-017,Similipal Odisha,21.9300,86.3500,Fire,2021,High,0.0,32.0,0.0,58,Prolonged forest canopy fire detected by MODIS/VIIRS
+HIST-018,Sunderbans West Bengal,21.9497,88.8980,Cyclone,2020,High,195.0,160.0,0.0,0,Cyclone Amphan storm surge and embankment breaches

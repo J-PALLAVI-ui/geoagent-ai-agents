@@ -1,0 +1,11 @@
+# Core Multi-Agent, ML, API, and Data Processing
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pydantic>=2.10.0
+langgraph>=1.0.0
+langchain-core>=1.0.0
+scikit-learn>=1.5.0
+pandas>=2.2.0
+numpy>=2.0.0
+joblib>=1.4.0
+requests>=2.32.0

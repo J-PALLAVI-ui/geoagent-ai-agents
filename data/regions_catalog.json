@@ -1,0 +1,244 @@
+{
+  "regions": [
+    {
+      "id": "bengaluru",
+      "name": "Bengaluru, Karnataka",
+      "aliases": ["bangalore", "harohalli", "bengaluru urban"],
+      "state_or_country": "Karnataka, India",
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "elevation_m": 920.0,
+      "slope_deg": 3.2,
+      "population_density_per_km2": 4381,
+      "zone_type": "Urban Plateau",
+      "land_cover": "Dense Urban & Lakes",
+      "default_scenario": "no_risk",
+      "shelters": [
+        {"name": "Kanteerava Indoor Stadium Relief Hub", "latitude": 12.9702, "longitude": 77.5920, "capacity": 2500, "type": "Civic Stadium"},
+        {"name": "BBMP Emergency Shelter - Jayanagar", "latitude": 12.9308, "longitude": 77.5838, "capacity": 1200, "type": "Municipal Shelter"},
+        {"name": "Palace Grounds Evacuation Staging", "latitude": 12.9988, "longitude": 77.5921, "capacity": 5000, "type": "Open Assembly Zone"}
+      ],
+      "contacts": [
+        {"agency": "Karnataka SDMA Control Room", "number": "080-22340676", "role": "State Disaster Authority"},
+        {"agency": "BBMP Emergency Helpline", "number": "1533 / 22660000", "role": "Municipal Rescue"},
+        {"agency": "National Emergency Response", "number": "112", "role": "Unified Emergency"}
+      ]
+    },
+    {
+      "id": "ernakulam",
+      "name": "Ernakulam, Kerala",
+      "aliases": ["kochi", "ernakulam kerala", "periyar basin"],
+      "state_or_country": "Kerala, India",
+      "latitude": 9.9816,
+      "longitude": 76.2999,
+      "elevation_m": 12.0,
+      "slope_deg": 1.8,
+      "population_density_per_km2": 3240,
+      "zone_type": "Coastal Lowland & River Basin",
+      "land_cover": "Alluvial Floodplain & Urban",
+      "default_scenario": "flood_severe",
+      "shelters": [
+        {"name": "CUSAT High-Ground Relief Camp", "latitude": 10.0442, "longitude": 76.3285, "capacity": 1800, "type": "University Campus"},
+        {"name": "Aluva Elevated Relief Center", "latitude": 10.1076, "longitude": 76.3516, "capacity": 1400, "type": "Government School"},
+        {"name": "Kakkanad Civil Station Hub", "latitude": 10.0159, "longitude": 76.3419, "capacity": 2000, "type": "District HQ"}
+      ],
+      "contacts": [
+        {"agency": "Kerala SDMA Helpline", "number": "1070 / 0471-2331639", "role": "State Disaster Authority"},
+        {"agency": "Ernakulam DEOC", "number": "1077 / 0484-2423513", "role": "District Emergency Center"},
+        {"agency": "NDRF Southern Battalion", "number": "044-24791000", "role": "Flood Rescue Unit"}
+      ]
+    },
+    {
+      "id": "wayanad",
+      "name": "Wayanad, Kerala",
+      "aliases": ["meppadi", "kalpetta", "vythiri"],
+      "state_or_country": "Kerala, India",
+      "latitude": 11.6854,
+      "longitude": 76.1320,
+      "elevation_m": 880.0,
+      "slope_deg": 28.5,
+      "population_density_per_km2": 397,
+      "zone_type": "Western Ghats Steep Escarpment",
+      "land_cover": "Montane Forest & Plantations",
+      "default_scenario": "landslide_high",
+      "shelters": [
+        {"name": "Kalpetta Govt. High School Camp", "latitude": 11.6103, "longitude": 76.0825, "capacity": 950, "type": "Safe Ridge Shelter"},
+        {"name": "Sulthan Bathery Relief Center", "latitude": 11.6634, "longitude": 76.2571, "capacity": 1200, "type": "Civic Hall"},
+        {"name": "Mananthavady District Hospital Hub", "latitude": 11.8014, "longitude": 76.0044, "capacity": 700, "type": "Medical & Shelter"}
+      ],
+      "contacts": [
+        {"agency": "Wayanad DEOC", "number": "1077 / 04936-204151", "role": "Landslide Control"},
+        {"agency": "Kerala Fire & Rescue", "number": "101", "role": "Slope Search & Rescue"},
+        {"agency": "National Emergency Response", "number": "112", "role": "Unified Emergency"}
+      ]
+    },
+    {
+      "id": "puri",
+      "name": "Puri Coast, Odisha",
+      "aliases": ["puri", "odisha coast", "bhubaneswar coast"],
+      "state_or_country": "Odisha, India",
+      "latitude": 19.8135,
+      "longitude": 85.8312,
+      "elevation_m": 8.0,
+      "slope_deg": 0.9,
+      "population_density_per_km2": 1150,
+      "zone_type": "Bay of Bengal Cyclone Corridor",
+      "land_cover": "Coastal Plain & Beaches",
+      "default_scenario": "cyclone_high",
+      "shelters": [
+        {"name": "OSDMA Multipurpose Cyclone Shelter #14", "latitude": 19.8450, "longitude": 85.8120, "capacity": 1500, "type": "Reinforced Cyclone Shelter"},
+        {"name": "Pipili Inland Evacuation Hub", "latitude": 20.1145, "longitude": 85.8321, "capacity": 2800, "type": "Inland Safe Zone"},
+        {"name": "Khordha Railhead Staging Ground", "latitude": 20.1860, "longitude": 85.6215, "capacity": 3500, "type": "Regional Hub"}
+      ],
+      "contacts": [
+        {"agency": "Odisha SDMA (OSDMA)", "number": "1070 / 0674-2395398", "role": "Cyclone Command"},
+        {"agency": "IMD Cyclone Warning Centre", "number": "1800-180-1717", "role": "Meteorological Alert"},
+        {"agency": "ODRAF & NDRF 3rd Bn", "number": "0671-2879711", "role": "Coastal Evacuation"}
+      ]
+    },
+    {
+      "id": "bandipur",
+      "name": "Bandipur Forest, Karnataka",
+      "aliases": ["bandipur", "nagarhole", "nilgiri biosphere"],
+      "state_or_country": "Karnataka, India",
+      "latitude": 11.6680,
+      "longitude": 76.6285,
+      "elevation_m": 1020.0,
+      "slope_deg": 14.2,
+      "population_density_per_km2": 145,
+      "zone_type": "Dry Deciduous Forest Belt",
+      "land_cover": "Dense Reserve Forest",
+      "default_scenario": "wildfire_high",
+      "shelters": [
+        {"name": "Gundlupet Municipal Safe Hall", "latitude": 11.8075, "longitude": 76.6915, "capacity": 800, "type": "Township Shelter"},
+        {"name": "Chamarajanagar Fire Staging Camp", "latitude": 11.9261, "longitude": 76.9437, "capacity": 1400, "type": "District Command"},
+        {"name": "Nanjangud Community Complex", "latitude": 12.1190, "longitude": 76.6805, "capacity": 1100, "type": "Relief Center"}
+      ],
+      "contacts": [
+        {"agency": "Karnataka Forest Fire Helpline", "number": "1926", "role": "Forest Fire Rapid Unit"},
+        {"agency": "Chamarajanagar Fire Station", "number": "101 / 08226-222101", "role": "Wildfire Suppression"},
+        {"agency": "National Emergency Response", "number": "112", "role": "Unified Emergency"}
+      ]
+    },
+    {
+      "id": "chennai",
+      "name": "Chennai Coast, Tamil Nadu",
+      "aliases": ["chennai", "adyar", "marina"],
+      "state_or_country": "Tamil Nadu, India",
+      "latitude": 13.0827,
+      "longitude": 80.2707,
+      "elevation_m": 6.0,
+      "slope_deg": 1.1,
+      "population_density_per_km2": 5800,
+      "zone_type": "Urban Coastal Delta",
+      "land_cover": "High-Density Coastal Metro",
+      "default_scenario": "cyclone_medium",
+      "shelters": [
+        {"name": "Nehru Indoor Stadium Relief Center", "latitude": 13.0870, "longitude": 80.2720, "capacity": 4000, "type": "Stadium Shelter"},
+        {"name": "Anna University Guindy Shelter", "latitude": 13.0109, "longitude": 80.2354, "capacity": 2600, "type": "Elevated Campus"},
+        {"name": "Tambaram Inland Evacuation Hub", "latitude": 12.9249, "longitude": 80.1000, "capacity": 3200, "type": "Inland Safe Zone"}
+      ],
+      "contacts": [
+        {"agency": "TNSDMA State Control", "number": "1070", "role": "State Emergency Ops"},
+        {"agency": "Greater Chennai Corp Helpline", "number": "1913", "role": "Urban Flood & Cyclone"},
+        {"agency": "Indian Coast Guard MRCC", "number": "1554", "role": "Maritime Rescue"}
+      ]
+    },
+    {
+      "id": "guwahati",
+      "name": "Guwahati, Assam",
+      "aliases": ["assam", "brahmaputra valley", "kaziranga"],
+      "state_or_country": "Assam, India",
+      "latitude": 26.1445,
+      "longitude": 91.7362,
+      "elevation_m": 55.0,
+      "slope_deg": 2.4,
+      "population_density_per_km2": 2150,
+      "zone_type": "Brahmaputra River Floodplain",
+      "land_cover": "River Basin & Wetlands",
+      "default_scenario": "flood_high",
+      "shelters": [
+        {"name": "Sarusajai Sports Complex Relief Hub", "latitude": 26.1154, "longitude": 91.7589, "capacity": 3500, "type": "Elevated Sports Complex"},
+        {"name": "IIT Guwahati Elevated Camp", "latitude": 26.1928, "longitude": 91.6951, "capacity": 2200, "type": "High-Ground Campus"},
+        {"name": "Khanapara Veterinary Ground", "latitude": 26.1202, "longitude": 91.8211, "capacity": 1800, "type": "Assembly Zone"}
+      ],
+      "contacts": [
+        {"agency": "Assam SDMA (ASDMA)", "number": "1070 / 1079", "role": "Flood Control Room"},
+        {"agency": "Kamrup Metro DEOC", "number": "1077", "role": "District Response"},
+        {"agency": "NDRF 1st Battalion Guwahati", "number": "0361-2840033", "role": "River Rescue"}
+      ]
+    },
+    {
+      "id": "joshimath",
+      "name": "Joshimath, Uttarakhand",
+      "aliases": ["chamoli", "uttarakhand", "rudraprayag"],
+      "state_or_country": "Uttarakhand, India",
+      "latitude": 30.5506,
+      "longitude": 79.5660,
+      "elevation_m": 1890.0,
+      "slope_deg": 32.0,
+      "population_density_per_km2": 210,
+      "zone_type": "High Himalayan Seismic & Slope Zone",
+      "land_cover": "Alpine Terrain & Slopes",
+      "default_scenario": "landslide_high",
+      "shelters": [
+        {"name": "Pipalkoti Safe Valley Relief Camp", "latitude": 30.4328, "longitude": 79.4290, "capacity": 900, "type": "Valley Safe Zone"},
+        {"name": "Gopeshwar Stadium Staging Camp", "latitude": 30.4125, "longitude": 79.3197, "capacity": 1500, "type": "District HQ"},
+        {"name": "Gauchar Airstrip Evacuation Hub", "latitude": 30.2932, "longitude": 79.1462, "capacity": 2000, "type": "Air & Road Evacuation"}
+      ],
+      "contacts": [
+        {"agency": "Uttarakhand SDMA", "number": "1070 / 0135-2710334", "role": "Himalayan Ops"},
+        {"agency": "SDRF Uttarakhand", "number": "0135-2970091", "role": "Mountain Rescue"},
+        {"agency": "ITBP Mountain Rescue", "number": "112", "role": "High-Altitude Relief"}
+      ]
+    },
+    {
+      "id": "bhuj",
+      "name": "Bhuj, Gujarat",
+      "aliases": ["kutch", "bhuj gujarat"],
+      "state_or_country": "Gujarat, India",
+      "latitude": 23.2420,
+      "longitude": 69.6669,
+      "elevation_m": 110.0,
+      "slope_deg": 2.0,
+      "population_density_per_km2": 620,
+      "zone_type": "Seismic Zone V Rift Basin",
+      "land_cover": "Semi-Arid Plain",
+      "default_scenario": "earthquake_high",
+      "shelters": [
+        {"name": "Jubilee Ground Open Assembly Zone", "latitude": 23.2528, "longitude": 69.6714, "capacity": 3500, "type": "Open Seismic Safe Zone"},
+        {"name": "Mirzapar Bypass Relief Park", "latitude": 23.2215, "longitude": 69.6350, "capacity": 2200, "type": "Open Ground"},
+        {"name": "GK General Hospital Trauma Hub", "latitude": 23.2498, "longitude": 69.6584, "capacity": 850, "type": "Medical Center"}
+      ],
+      "contacts": [
+        {"agency": "GSDMA Gandhinagar", "number": "1070 / 079-23259283", "role": "State Seismic Control"},
+        {"agency": "Kutch District Emergency", "number": "1077 / 02832-250080", "role": "Local Response"},
+        {"agency": "National Seismology Center", "number": "112", "role": "Earthquake Helpline"}
+      ]
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai, Maharashtra",
+      "aliases": ["maharashtra", "mithi river", "kurla"],
+      "state_or_country": "Maharashtra, India",
+      "latitude": 19.0760,
+      "longitude": 72.8777,
+      "elevation_m": 14.0,
+      "slope_deg": 1.5,
+      "population_density_per_km2": 7300,
+      "zone_type": "Coastal Urban Basin",
+      "land_cover": "Dense Metro Coastal",
+      "default_scenario": "flood_medium",
+      "shelters": [
+        {"name": "BKC MMRDA Open Relief Ground", "latitude": 19.0653, "longitude": 72.8679, "capacity": 4500, "type": "Elevated Urban Plaza"},
+        {"name": "IIT Bombay Powai Campus Hub", "latitude": 19.1334, "longitude": 72.9133, "capacity": 3000, "type": "Elevated Campus"},
+        {"name": "Goregaon Exhibition Relief Center", "latitude": 19.1510, "longitude": 72.8535, "capacity": 5000, "type": "Convention Shelter"}
+      ],
+      "contacts": [
+        {"agency": "BMC Disaster Control", "number": "1916 / 022-22694725", "role": "Civic Flood Command"},
+        {"agency": "Maharashtra SDMA", "number": "1070", "role": "State Coordination"},
+        {"agency": "NDRF 5th Battalion", "number": "02114-272100", "role": "Urban Rescue"}
+      ]
+    }
+  ]
+}

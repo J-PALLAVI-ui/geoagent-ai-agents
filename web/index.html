@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoAgent AI — Autonomous Disaster Monitoring & Response</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">GA</div>
+      <div>
+        <h1>GeoAgent AI</h1>
+        <p class="subtitle">Autonomous Multi-Agent Disaster Monitoring &amp; Geospatial Response System</p>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span id="healthBadge" class="pill pill-neutral">Initializing...</span>
+      <span class="pill pill-outline">LangGraph + Scikit-Learn + GeoJSON</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Input & Presets -->
+    <section class="control-panel card">
+      <div class="control-header">
+        <div>
+          <h2>Location Surveillance Input</h2>
+          <p class="hint">Select or click any region on the map — agents autonomously detect hazards, predict severity, issue alerts, and plan response.</p>
+        </div>
+        <div class="mode-switch">
+          <label for="modeSelect">Data Mode:</label>
+          <select id="modeSelect">
+            <option value="simulation" selected>Simulation Demo (Auto-Detect by Region)</option>
+            <option value="live">Live External APIs (with Fault Fallback)</option>
+          </select>
+          <label for="scenarioSelect">Scenario:</label>
+          <select id="scenarioSelect">
+            <option value="">Auto-Detect from Telemetry</option>
+          </select>
+        </div>
+      </div>
+
+      <form id="analyzeForm" class="search-row">
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Enter city or region (e.g., Ernakulam, Wayanad, Puri Coast, Bandipur, Bhuj, Bengaluru)..."
+          value="Ernakulam, Kerala"
+          required
+        />
+        <input type="hidden" id="latInput" />
+        <input type="hidden" id="lonInput" />
+        <button type="submit" id="analyzeBtn" class="btn-primary">Run Autonomous Agents</button>
+      </form>
+
+      <div id="regionChips" class="chips-row"></div>
+    </section>
+
+    <!-- 6-Agent Autonomous Pipeline Strip -->
+    <section class="pipeline-strip card">
+      <div class="section-title-row">
+        <h3>Autonomous Multi-Agent Execution Trace (LangGraph StateGraph)</h3>
+        <span id="runMeta" class="muted-text">Ready</span>
+      </div>
+      <div id="agentPipeline" class="agent-grid">
+        <div class="agent-card placeholder">Run an analysis to inspect live agent orchestration.</div>
+      </div>
+    </section>
+
+    <!-- Main Split: Geospatial Map + Insights Tabs -->
+    <section class="workspace-grid">
+      <!-- Left Column: Map + Multi-Source Telemetry -->
+      <div class="left-col">
+        <div class="card map-card">
+          <div class="section-title-row">
+            <h3>Interactive Geospatial Risk &amp; Evacuation Map</h3>
+            <div class="legend">
+              <span class="leg-item"><i class="dot dot-high"></i>High</span>
+              <span class="leg-item"><i class="dot dot-med"></i>Medium</span>
+              <span class="leg-item"><i class="dot dot-low"></i>Low</span>
+              <span class="leg-item"><i class="dot dot-shelter"></i>Shelter</span>
+              <span class="leg-item"><i class="line-evac"></i>Evacuation Route</span>
+            </div>
+          </div>
+          <div id="mapContainer" class="map-box"></div>
+          <p class="map-tip">Tip: Click anywhere on the map to trigger autonomous multi-agent analysis for custom coordinates.</p>
+        </div>
+
+        <div class="card">
+          <h3>Multi-Source Data Ingestion</h3>
+          <div id="telemetryGrid" class="telemetry-grid"></div>
+          <div id="fallbackBanner" class="fallback-box hidden"></div>
+        </div>
+
+        <div class="card">
+          <h3>Nearby Historical Disaster Records</h3>
+          <div id="historicalList" class="list-stack"></div>
+        </div>
+      </div>
+
+      <!-- Right Column: Tabbed Decisions -->
+      <div class="right-col card tabs-card">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-hazard">Hazard &amp; Risk</button>
+          <button class="tab-btn" data-tab="tab-alerts">Alerts &amp; Comms</button>
+          <button class="tab-btn" data-tab="tab-response">Response &amp; Shelters</button>
+          <button class="tab-btn" data-tab="tab-ops">Agent Ops &amp; Feedback</button>
+        </div>
+
+        <!-- Tab 1: Hazard & Risk -->
+        <div id="tab-hazard" class="tab-panel active">
+          <div id="hazardSummary" class="hazard-hero"></div>
+          <div class="subcard">
+            <h4>Cross-Source Key Indicators &amp; Explainable AI Reasoning</h4>
+            <p id="classificationExplanation" class="explanation-text"></p>
+            <ul id="indicatorsList" class="bullet-list"></ul>
+          </div>
+          <div class="subcard">
+            <h4>Disaster Classification Probabilities</h4>
+            <div id="probBars" class="prob-bars"></div>
+          </div>
+          <div class="subcard">
+            <h4>Geospatial Impact Metrics</h4>
+            <div id="geoMetrics" class="kv-grid"></div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Alerts -->
+        <div id="tab-alerts" class="tab-panel">
+          <div id="alertStatusBox" class="alert-banner"></div>
+          <div class="subcard">
+            <h4>SMS Gateway Dispatch Preview</h4>
+            <pre id="smsPreview" class="msg-preview"></pre>
+          </div>
+          <div class="subcard">
+            <h4>Email Advisory Preview</h4>
+            <p class="kv-line"><strong>Subject:</strong> <span id="emailSubject"></span></p>
+            <pre id="emailBody" class="msg-preview"></pre>
+          </div>
+          <div class="subcard">
+            <h4>Push Notification &amp; Channels</h4>
+            <p id="pushPreview" class="explanation-text"></p>
+            <div id="channelBadges" class="chips-row"></div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Response & Shelters -->
+        <div id="tab-response" class="tab-panel">
+          <div id="responsePriority" class="priority-banner"></div>
+          <div class="subcard">
+            <h4>Autonomous Recommended Actions</h4>
+            <ul id="actionsList" class="bullet-list"></ul>
+          </div>
+          <div class="subcard">
+            <h4>Citizen Safety Measures</h4>
+            <ul id="safetyList" class="bullet-list"></ul>
+          </div>
+          <div class="subcard">
+            <h4>Resource Allocation</h4>
+            <ul id="resourcesList" class="bullet-list"></ul>
+          </div>
+          <div class="subcard">
+            <h4>Nearest Relief Shelters &amp; Evacuation Routes</h4>
+            <div id="sheltersList" class="list-stack"></div>
+          </div>
+          <div class="subcard">
+            <h4>Emergency Contacts</h4>
+            <div id="contactsList" class="kv-grid"></div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Agent Ops & Feedback Loop -->
+        <div id="tab-ops" class="tab-panel">
+          <div class="subcard">
+            <div class="section-title-row">
+              <h4>Authority Feedback Loop (Continuous Calibration)</h4>
+              <span id="calibrationBadge" class="pill pill-outline">Offset: 0.0</span>
+            </div>
+            <p class="hint">Confirm or recalibrate this assessment. Feedback updates the SQLite calibration engine for future predictions in this region.</p>
+            <div class="feedback-buttons">
+              <button class="btn-fb btn-fb-good" data-verdict="confirmed">Confirm Hazard</button>
+              <button class="btn-fb btn-fb-warn" data-verdict="false_alarm">False Alarm</button>
+              <button class="btn-fb btn-fb-info" data-verdict="underestimated">Underestimated</button>
+              <button class="btn-fb btn-fb-info" data-verdict="overestimated">Overestimated</button>
+            </div>
+            <p id="feedbackResult" class="muted-text"></p>
+          </div>
+
+          <div class="subcard">
+            <div class="section-title-row">
+              <h4>ML Model Performance</h4>
+              <button id="retrainBtn" class="btn-secondary">Retrain Ensemble</button>
+            </div>
+            <div id="modelMetricsBox" class="kv-grid"></div>
+          </div>
+
+          <div class="subcard">
+            <h4>Agent Registry &amp; Live Latency Monitor</h4>
+            <div id="agentRegistryTable" class="table-wrap"></div>
+          </div>
+
+          <div class="subcard">
+            <h4>Monitored Region Watchlist</h4>
+            <div id="watchlistBox" class="list-stack"></div>
+          </div>
+
+          <div class="subcard">
+            <h4>Recent Alerts Audit Log</h4>
+            <div id="alertAuditBox" class="list-stack"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span><strong>GeoAgent AI</strong> — Autonomous Multi-Agent Disaster Monitoring &amp; Response System</span>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "classifier_model": "Ensemble(RandomForest + HistGradientBoosting + RBF-SVM)",
+  "regressor_model": "EnsembleRegressor(RandomForest + HistGradientBoosting)",
+  "features": [
+    "rainfall_mm_24h",
+    "rainfall_mm_3h",
+    "wind_speed_kmh",
+    "pressure_hpa",
+    "temperature_c",
+    "humidity_pct",
+    "soil_moisture",
+    "ndvi",
+    "ndwi",
+    "fire_hotspots_count",
+    "frp_mw",
+    "elevation_m",
+    "slope_deg",
+    "seismic_magnitude"
+  ],
+  "total_samples": 1320,
+  "train_samples": 1056,
+  "test_samples": 264,
+  "classification_accuracy": 1.0,
+  "classification_weighted_f1": 1.0,
+  "severity_mae": 3.566,
+  "severity_r2": 0.9648,
+  "classes": [
+    "Cyclone",
+    "Earthquake",
+    "Fire",
+    "Flood",
+    "Landslide",
+    "No Risk"
+  ]
+}
