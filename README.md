@@ -1,5 +1,9 @@
 # GeoAgent AI: Autonomous Disaster Monitoring and Response System
 
+🌐 **Live Public Web App:** [https://geoagent-ai-agents.onrender.com](https://geoagent-ai-agents.onrender.com)
+
+---
+
 ## Overview
 
 **GeoAgent AI** is an autonomous multi-agent system built with **LangGraph**, **Scikit-learn**, **FastAPI**, **Leaflet/Folium**, and **SQLite** that monitors any user-selected region and coordinates end-to-end disaster detection, geospatial impact mapping, risk prediction, automated alerting, and emergency response planning.
